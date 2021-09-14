@@ -9,6 +9,9 @@ import {
 
 import Home from "./Container/Home";
 import Login from "./Container/Login";
+import Portfolio from "./Container/Portfolio";
+import Services from "./Container/Services";
+import Contact from "./Container/Contact";
 import { AuthContext } from "./App";
 const Approuter = () => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -30,6 +33,15 @@ const Approuter = () => {
         <PrivateRoute condition={isAuthenticated} path="/Container/Home">
           <Home></Home>
         </PrivateRoute>
+        <Route path="/Container/Portfolio">
+          <Portfolio></Portfolio>
+        </Route>
+        <Route path="/Container/Services">
+          <Services></Services>
+        </Route>
+        <Route path="/Container/Contact">
+          <Contact></Contact>
+        </Route>
       </Switch>
     </Router>
   );
