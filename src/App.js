@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Approuter from "./Approuter";
+import { createContext, useEffect, useState } from "react";
+
+export const AuthContext = createContext();
 
 function App() {
+  const [isAuthenticated, setAuthentication] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      setAuthentication(true);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{ isAuthenticated, setAuthentication }}>
+      <Approuter></Approuter>
+    </AuthContext.Provider>
   );
 }
 
