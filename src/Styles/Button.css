@@ -9,6 +9,10 @@
     width: 280px;
 }
 
+.btn-small{
+    width: 100px;
+}
+
 .btn-primary{
-    background-color: aqua;
+    background-color: rgb(141, 240, 128);
 }

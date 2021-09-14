@@ -1,0 +1,35 @@
+.navbar-container {
+  height: 10vh;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  background-color: #363865;
+}
+.navbar-logo {
+  color: white;
+  flex: 0.8;
+  margin-right: 15px;
+}
+.navbar-list {
+  font-size: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-button {
+  flex: 0.8;
+  text-align: right;
+  margin-left: 15px;
+}
+
+.navlink-selected{
+    color: black;
+    text-decoration: underline;
+}

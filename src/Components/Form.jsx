@@ -22,6 +22,11 @@ const Form = ({ handleChange, handleSubmit, credentials }) => {
         onChange={handleChange}
       ></input>
       <br />
+      <div className="checkbox-container">
+        <input type="checkbox" value="RememberMe" className="checkbox"></input>
+        <span className="checkbox-text">Remember Me</span>
+      </div>
+      <br />
       <Button
         label="Sign in"
         size="btn-extralarge"
